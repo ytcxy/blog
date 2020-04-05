@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>hexo github （3）配置的坑点</title>
+      <link href="/2020/04/05/hexo-github/"/>
+      <url>/2020/04/05/hexo-github/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一：-新建分类页面和标签页面的时候"><a href="#一：-新建分类页面和标签页面的时候" class="headerlink" title="一： 新建分类页面和标签页面的时候"></a>一： 新建分类页面和标签页面的时候</h3><p>可以的源代码是这样</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>或者这样</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>然而我写成这样</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>为什么我会写成这样呢， 因为在 typora中打开的时候， 最上面和最下面的 — 被自动渲染了， 所以就没有看到，当我打开源码的时候才开到， emmm，每次部署上去都出错， 搞得我心态都崩了。 emmm</p><h3 id="二：-侧边栏的图标不能显示，或者显示之后网页就不能进去了；"><a href="#二：-侧边栏的图标不能显示，或者显示之后网页就不能进去了；" class="headerlink" title="二： 侧边栏的图标不能显示，或者显示之后网页就不能进去了；"></a>二： 侧边栏的图标不能显示，或者显示之后网页就不能进去了；</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home:  &#x2F; || home</span><br><span class="line">  about: &#x2F;about&#x2F; || user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br></pre></td></tr></table></figure><p>我写成上面那样是不行的， 或者我把后面的图标去掉，网页可以进，但没有图标。 </p><p>如果图标写在下面，也不可以。</p><p>机缘巧合我写成了这样： </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home:  &#x2F;|| home</span><br><span class="line">  about: &#x2F;about&#x2F;|| user</span><br><span class="line">  tags: &#x2F;tags&#x2F;|| tags</span><br><span class="line">  categories: &#x2F;categories&#x2F;|| th</span><br><span class="line">  archives: &#x2F;archives&#x2F;|| archive</span><br></pre></td></tr></table></figure><p>就是||前面没有空格， 他就可以了。 </p><h3 id="还要坑，-但是我忘了。emmm"><a href="#还要坑，-但是我忘了。emmm" class="headerlink" title="还要坑， 但是我忘了。emmm"></a>还要坑， 但是我忘了。emmm</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo+github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo github (2)</title>
       <link href="/2020/04/05/hexo-github-2/"/>
       <url>/2020/04/05/hexo-github-2/</url>
       
-        <content type="html"><![CDATA[<h3 id="首先注册一个-github-账号。"><a href="#首先注册一个-github-账号。" class="headerlink" title="首先注册一个 github 账号。"></a>首先注册一个 <code>github</code> 账号。</h3><p>新建一个仓库， 命名为 <code>{name}.github.io</code></p><p>name 为你的github的用户名， 所以每个用户名只能用一次</p><p>然后打开 hexo 的根目录， 找到站点配置文件，</p><p>找到最后的地方：</p><p><img src="https://s1.ax1x.com/2020/04/05/GBwPsS.png" alt=""></p><p>修改之后保存； </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>之后就可以在用github的网站访问了。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="首先注册一个-github-账号。"><a href="#首先注册一个-github-账号。" class="headerlink" title="首先注册一个 github 账号。"></a>首先注册一个 <code>github</code> 账号。</h3><p>新建一个仓库， 命名为 <code>{name}.github.io</code></p><p>name 为你的github的用户名， 所以每个用户名只能用一次</p><p>然后打开 hexo 的根目录， 找到站点配置文件，</p><a id="more"></a><p>找到最后的地方：</p><p><img src="https://s1.ax1x.com/2020/04/05/GBwPsS.png" alt=""></p><p>修改之后保存； </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>之后就可以在用github的网站访问了。</p>]]></content>
       
       
       <categories>

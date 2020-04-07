@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>git 指令学习</title>
+      <link href="/2020/04/07/git-%E6%8C%87%E4%BB%A4%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2020/04/07/git-%E6%8C%87%E4%BB%A4%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h4 id="常用的几条命令"><a href="#常用的几条命令" class="headerlink" title="常用的几条命令"></a>常用的几条命令</h4><p><code>git remote add origin {https://github.com/}</code> {就是仓库地址}</p><p>我们init之后， 要把本地和仓库对应起来。 这样才能知道本地对应什么仓库。 </p><ul><li><code>git init</code></li><li><code>git add 1.txt</code></li><li><code>git commit -m &quot;xxxxx&quot;</code></li><li><code>git push origin master</code>   master 当前分支。 </li></ul><a id="more"></a><p><code>git status</code> 查看本地文件的状态； </p><p><code>git add .</code> 代表当前文件夹下的文件都添加到缓冲区。 </p><p><code>git reset [opt] 版本号</code></p><p><code>--hard 回滚归档区，缓冲区，工作区</code></p><p><code>--soft 回滚归档区</code></p><p><code>--mixed 回滚归档区，缓冲区</code></p><p><code>git log</code></p><p><code>git reflog</code>   查看之前的操作。 </p><p><code>git revert 版本号</code>  抠掉一次操作。 </p><p><code>git branch -v</code> 查看当前有哪些分支，并处于哪个分支。 </p><p><code>git checkout -b b1</code>  创建了b1 这个分支，并处于b1这个分支。 </p><p>-b 是创建的意思，如果是切换分支， 那就不用写 -b。 </p><p>假设当前分支是 <code>master</code></p><p><code>git merge b1</code> 把b1这个分支合并到当前分支。 也就是 master这个分支。 </p><p><code>git pull</code> 拉取远程仓库最新的版本。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> git指令 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git指令 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数字与静态</title>
       <link href="/2020/04/07/%E6%95%B0%E5%AD%97%E4%B8%8E%E9%9D%99%E6%80%81/"/>
       <url>/2020/04/07/%E6%95%B0%E5%AD%97%E4%B8%8E%E9%9D%99%E6%80%81/</url>

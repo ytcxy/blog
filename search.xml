@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>检索模型与搜索排序</title>
+      <link href="/2020/04/08/200408%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
+      <url>/2020/04/08/200408%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</url>
+      
+        <content type="html"><![CDATA[<h4 id="词频因子：-tf"><a href="#词频因子：-tf" class="headerlink" title="词频因子： tf"></a>词频因子： <code>tf</code></h4><p>即一个单词在文档中出现的次数；反复出现的单词，往往能表征文档的主题信息。 </p><p>一种词频因子的变体计算公式是： </p><p>$$W_{tf} = 1 + log(tf)$$</p><p>公式中的 1 是为了起到平滑的作用。 </p><p>另一种单词词频因子的标题计算公式是： </p><a id="more"></a><p>$W_{tf} = a + (1 - a) * \frac{tf}{max(tf)}$</p><p>其中 a 是调节因子， 新的研究表明 a 的取值为0.4效果更好。 </p><p><code>tf</code> 代表这个单词的实际词频数目，  而 <code>max(tf)</code> 代表文档中所有的单词中出现次数最多的那个单词对应的词频数目。 </p><h4 id="逆文档频率因子：-idf"><a href="#逆文档频率因子：-idf" class="headerlink" title="逆文档频率因子： idf"></a>逆文档频率因子： <code>idf</code></h4><p>给定一个文档集合，那么每个单词的 <code>idf</code> 就确定了。 </p><p>计算公式如下： </p><p>$idf_k = log(\frac{N}{n_k})$</p><p>$N$ 代表文档集合中一共又多少个文档。 </p><p>$n_k$ 代表特征单词在多少个文档中出现过。 </p><p><code>idf</code> 的值越高， 则其区分不同文档的能力就越强。 反之，能力就越弱。 </p><h4 id="tf-idf-框架"><a href="#tf-idf-框架" class="headerlink" title="tf * idf 框架"></a><code>tf * idf</code> 框架</h4><p>$$Weight_{word} = tf * idf$$</p><p>对于文档D 来说， </p><p>如果 D 中的某个单词的词频很高，而且这个单词在文档集合的其他文档中很少出现，那么这个单词的权值就会很高。 </p><p>如果 D 中的某个单词的词频很高，而且这个单词在文档集合的其他文档中也经常出现，那么这个单词的权值就一般。 </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搜索引擎 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 搜索引擎 </tag>
+            
+            <tag> 日常总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>github搜索</title>
       <link href="/2020/04/08/200408github%E6%90%9C%E7%B4%A2/"/>
       <url>/2020/04/08/200408github%E6%90%9C%E7%B4%A2/</url>

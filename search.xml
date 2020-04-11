@@ -4,11 +4,38 @@
   
     
     <entry>
+      <title>图像界面</title>
+      <link href="/2020/04/10/200410%E5%9B%BE%E5%83%8F%E7%95%8C%E9%9D%A2/"/>
+      <url>/2020/04/10/200410%E5%9B%BE%E5%83%8F%E7%95%8C%E9%9D%A2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="JFrame-是GUI中的容器"><a href="#JFrame-是GUI中的容器" class="headerlink" title="JFrame 是GUI中的容器"></a>JFrame 是GUI中的容器</h3><h3 id="JButton-是最常见的组件"><a href="#JButton-是最常见的组件" class="headerlink" title="JButton 是最常见的组件"></a>JButton 是最常见的组件</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> 基础知识 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>检索模型与搜索排序</title>
       <link href="/2020/04/08/200408%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
       <url>/2020/04/08/200408%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</url>
       
-        <content type="html"><![CDATA[<h4 id="词频因子：-tf"><a href="#词频因子：-tf" class="headerlink" title="词频因子： tf"></a>词频因子： <code>tf</code></h4><p>即一个单词在文档中出现的次数；反复出现的单词，往往能表征文档的主题信息。 </p><p>一种词频因子的变体计算公式是： </p><p>$$W_{tf} = 1 + log(tf)$$</p><p>公式中的 1 是为了起到平滑的作用。 </p><p>另一种单词词频因子的标题计算公式是： </p><a id="more"></a><p>$W_{tf} = a + (1 - a) * \frac{tf}{max(tf)}$</p><p>其中 a 是调节因子， 新的研究表明 a 的取值为0.4效果更好。 </p><p><code>tf</code> 代表这个单词的实际词频数目，  而 <code>max(tf)</code> 代表文档中所有的单词中出现次数最多的那个单词对应的词频数目。 </p><h4 id="逆文档频率因子：-idf"><a href="#逆文档频率因子：-idf" class="headerlink" title="逆文档频率因子： idf"></a>逆文档频率因子： <code>idf</code></h4><p>给定一个文档集合，那么每个单词的 <code>idf</code> 就确定了。 </p><p>计算公式如下： </p><p>$idf_k = log(\frac{N}{n_k})$</p><p>$N$ 代表文档集合中一共又多少个文档。 </p><p>$n_k$ 代表特征单词在多少个文档中出现过。 </p><p><code>idf</code> 的值越高， 则其区分不同文档的能力就越强。 反之，能力就越弱。 </p><h4 id="tf-idf-框架"><a href="#tf-idf-框架" class="headerlink" title="tf * idf 框架"></a><code>tf * idf</code> 框架</h4><p>$$Weight_{word} = tf * idf$$</p><p>对于文档D 来说， </p><p>如果 D 中的某个单词的词频很高，而且这个单词在文档集合的其他文档中很少出现，那么这个单词的权值就会很高。 </p><p>如果 D 中的某个单词的词频很高，而且这个单词在文档集合的其他文档中也经常出现，那么这个单词的权值就一般。 </p>]]></content>
+        <content type="html"><![CDATA[<h4 id="词频因子：-tf"><a href="#词频因子：-tf" class="headerlink" title="词频因子： tf"></a>词频因子： <code>tf</code></h4><p>即一个单词在文档中出现的次数；反复出现的单词，往往能表征文档的主题信息。 </p><p>一种词频因子的变体计算公式是： </p><script type="math/tex; mode=display">W_{tf} = 1 + log(tf)</script><p>公式中的 1 是为了起到平滑的作用。 </p><p>另一种单词词频因子的标题计算公式是： </p><a id="more"></a><p>$W_{tf} = a + (1 - a) * \frac{tf}{max(tf)}$</p><p>其中 a 是调节因子， 新的研究表明 a 的取值为0.4效果更好。 </p><p><code>tf</code> 代表这个单词的实际词频数目，  而 <code>max(tf)</code> 代表文档中所有的单词中出现次数最多的那个单词对应的词频数目。 </p><h4 id="逆文档频率因子：-idf"><a href="#逆文档频率因子：-idf" class="headerlink" title="逆文档频率因子： idf"></a>逆文档频率因子： <code>idf</code></h4><p>给定一个文档集合，那么每个单词的 <code>idf</code> 就确定了。 </p><p>计算公式如下： </p><p>$idf_k = log(\frac{N}{n_k})$</p><p>$N$ 代表文档集合中一共又多少个文档。 </p><p>$n_k$ 代表特征单词在多少个文档中出现过。 </p><p><code>idf</code> 的值越高， 则其区分不同文档的能力就越强。 反之，能力就越弱。 </p><h4 id="tf-idf-框架"><a href="#tf-idf-框架" class="headerlink" title="tf * idf 框架"></a><code>tf * idf</code> 框架</h4><script type="math/tex; mode=display">Weight_{word} = tf * idf</script><p>对于文档D 来说， </p><p>如果 D 中的某个单词的词频很高，而且这个单词在文档集合的其他文档中很少出现，那么这个单词的权值就会很高。 </p><p>如果 D 中的某个单词的词频很高，而且这个单词在文档集合的其他文档中也经常出现，那么这个单词的权值就一般。 </p><h3 id="检索质量评价标准"><a href="#检索质量评价标准" class="headerlink" title="检索质量评价标准"></a>检索质量评价标准</h3><h4 id="精确率与召回率"><a href="#精确率与召回率" class="headerlink" title="精确率与召回率"></a>精确率与召回率</h4><p><img src="https://s1.ax1x.com/2020/04/09/GhXvHU.png" alt="相关图片"></p><p>N ： 代表查询相关且搜索到</p><p>M： 代表查询不相关且搜索到</p><p>K ： 代表查询相关但没搜索到</p><p>L ： 代表查询不相关但没有搜索到； </p><script type="math/tex; mode=display">精确率 = \frac{N}{N+M}</script><script type="math/tex; mode=display">召回率 = \frac{N}{N + K}</script><h3 id="MAP"><a href="#MAP" class="headerlink" title="MAP"></a>MAP</h3><p><code>MAP</code>  是衡量多个查询的平均检索质量的</p><p><code>AP</code> 是衡量单个查询的检索质量的</p><p>AP 的计算公式： 相关文档的理想排名位置除以实际排名位置， 然后相加。 </p>]]></content>
       
       
       <categories>

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>语言元素</title>
+      <link href="/2020/04/12/200412%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/"/>
+      <url>/2020/04/12/200412%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/</url>
+      
+        <content type="html"><![CDATA[<p>可以使用Python中内置的函数对变量类型进行转换。</p><ul><li><code>int()</code> : 转换成整数</li><li><code>float</code> : 转换成浮点数</li><li><code>str()</code> : 转换成字符串</li><li><code>chr()</code> : 一个数字字符， 转换成字符。</li><li><code>ord()</code> 一个字符，转换整数。 </li></ul><a id="more"></a><p>运算符号： </p><ul><li>/  除法</li><li>// 整除</li><li>% 模</li><li>** 乘方</li></ul><h4 id="运算符："><a href="#运算符：" class="headerlink" title="运算符："></a>运算符：</h4><div class="table-container"><table><thead><tr><th style="text-align:left">运算符</th><th style="text-align:left">描述</th></tr></thead><tbody><tr><td style="text-align:left"><code>[]</code> <code>[:]</code></td><td style="text-align:left">下标，切片</td></tr><tr><td style="text-align:left"><code>**</code></td><td style="text-align:left">指数</td></tr><tr><td style="text-align:left"><code>~</code> <code>+</code> <code>-</code></td><td style="text-align:left">按位取反, 正负号</td></tr><tr><td style="text-align:left"><code>*</code> <code>/</code> <code>%</code> <code>//</code></td><td style="text-align:left">乘，除，模，整除</td></tr><tr><td style="text-align:left"><code>+</code> <code>-</code></td><td style="text-align:left">加，减</td></tr><tr><td style="text-align:left"><code>&gt;&gt;</code> <code>&lt;&lt;</code></td><td style="text-align:left">右移，左移</td></tr><tr><td style="text-align:left"><code>&amp;</code></td><td style="text-align:left">按位与</td></tr><tr><td style="text-align:left"><code>^</code> `</td><td style="text-align:left">`</td><td>按位异或，按位或</td></tr><tr><td style="text-align:left"><code>&lt;=</code> <code>&lt;</code> <code>&gt;</code> <code>&gt;=</code></td><td style="text-align:left">小于等于，小于，大于，大于等于</td></tr><tr><td style="text-align:left"><code>==</code> <code>!=</code></td><td style="text-align:left">等于，不等于</td></tr><tr><td style="text-align:left"><code>is</code>  <code>is not</code></td><td style="text-align:left">身份运算符</td></tr><tr><td style="text-align:left"><code>in</code> <code>not in</code></td><td style="text-align:left">成员运算符</td></tr><tr><td style="text-align:left"><code>not</code> <code>or</code> <code>and</code></td><td style="text-align:left">逻辑运算符</td></tr></tbody></table></div><h5 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">3</span></span><br><span class="line">a += b</span><br><span class="line">a *= a + <span class="number">2</span>  <span class="comment"># 相当于： a = a * (a + 2)</span></span><br></pre></td></tr></table></figure><p><code>print(&quot;%.1f&quot; % (c)) #: 保留一位小数输出</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 日常学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>检索模型与搜索排序</title>
       <link href="/2020/04/08/200408%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
       <url>/2020/04/08/200408%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</url>

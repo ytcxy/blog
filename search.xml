@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>大数值</title>
+      <link href="/2020/04/21/200421%E5%A4%A7%E6%95%B0%E5%80%BC/"/>
+      <url>/2020/04/21/200421%E5%A4%A7%E6%95%B0%E5%80%BC/</url>
+      
+        <content type="html"><![CDATA[<p>两个有用的类： </p><ul><li>BigInteger      整数运算</li><li>BigDecimal    浮点运算</li></ul><p>使用静态的valueOf方法可以将普通的数值转换为大数值：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BigInteger a &#x3D; BigInteger.valueOf(100);</span><br></pre></td></tr></table></figure><a id="more"></a><p>不能使用人们熟悉的算术运算符（如：+和*）处理大数值。而需要使用大数值类中的add和multiply方法。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BigInteger c &#x3D; a.add(b); &#x2F;&#x2F; c &#x3D; a + b</span><br><span class="line">BigInteger d &#x3D; c.multiply(b.add(BigInteger.valueOf(2))); &#x2F;&#x2F; d &#x3D; c * (b + 2)</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lotteryOdds = lotteryOdds.multiply(BigInteger.valueOf(n-i+ <span class="number">1</span>)).divide(BigInteger.valueOf(i));</span><br></pre></td></tr></table></figure><ul><li>BigInteger add（BigInteger other）</li><li>BigInteger subtract（BigInteger other）</li><li>BigInteger multiply（BigInteger other）</li><li>BigInteger divide（BigInteger other）</li><li>BigInteger mod（BigInteger other）</li></ul><p>上面就是 加减乘除模</p><ul><li>int compareTo（BigInteger other）</li></ul><p>如果这个大整数与另一个大整数other相等，返回0；如果这个大整数小于另一个大整数other，返回负数；否则，返回正数。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>输入输出</title>
+      <link href="/2020/04/21/200421%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"/>
+      <url>/2020/04/21/200421%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+      
+        <content type="html"><![CDATA[<h3 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h3><p>首先需要构造一个Scanner对象，并与“标准输入流”System.in关联。</p><p><code>Scanner in = new Scanner(System.in)</code></p><p>nextLine方法将输入一行。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">String s = in.nextLine();  <span class="comment">//读入一行</span></span><br><span class="line">String t = in.next(); <span class="comment">//读入 String， 遇到空格分隔</span></span><br><span class="line"><span class="keyword">int</span> x = in.nextInt();  <span class="comment">// 读入int</span></span><br><span class="line"><span class="keyword">double</span> d = in.nextDouble(); <span class="comment">// 读入 double</span></span><br></pre></td></tr></table></figure><h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><a id="more"></a><p>可以使用静态的String.format方法创建一个格式化的字符串，而不打印输出：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String message = String.format(<span class="string">"Hello, %s, Next"</span>, <span class="string">"sdfg"</span>);</span><br></pre></td></tr></table></figure><p>printf 可以格式化输出： </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.printf(<span class="string">"Hello, %s Next"</span>, <span class="string">"sdfg"</span>);</span><br></pre></td></tr></table></figure><h3 id="文件输入与输出："><a href="#文件输入与输出：" class="headerlink" title="文件输入与输出："></a>文件输入与输出：</h3><p>要想对文件进行读取，就需要一个用File对象构造一个Scanner对象，如下所示：</p><p>待补： </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>字符串</title>
+      <link href="/2020/04/21/200421%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <url>/2020/04/21/200421%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<h4 id="子串"><a href="#子串" class="headerlink" title="子串"></a>子串</h4><p>String类的substring方法可以从一个较大的字符串提取出一个子串。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"Hello"</span>;</span><br><span class="line">String t = s.substring(<span class="number">0</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure><p>取出来的就是 <code>Hel</code> ， 所以括号里的值， 就是取的区间。 </p><h4 id="拼接"><a href="#拼接" class="headerlink" title="拼接"></a>拼接</h4><p>Java 语言用 <code>+</code> 号拼接</p><a id="more"></a><p>如果需要把多个字符串放在一起，用一个定界符分隔，可以使用静态join方法：</p><p><code>String t = String.join(&quot;,&quot;, &quot;S&quot;, &quot;M&quot;, &quot;L&quot;, &quot;XL&quot;);</code></p><p>结果就是： S,M,L,XL</p><h4 id="不可变字符串"><a href="#不可变字符串" class="headerlink" title="不可变字符串"></a>不可变字符串</h4><p>String 类没有提供用于修改字符串的方法。</p><p>所以只能先提取处理，然后再拼接。</p><p>就是不能直接 <code>s[0] = &quot;b&quot;</code> 这样直接修改。 </p><p>但是可以直接重新赋值。 </p><h4 id="检测字符串是否相等"><a href="#检测字符串是否相等" class="headerlink" title="检测字符串是否相等"></a>检测字符串是否相等</h4><p><code>s.equals(t)</code> 检查 s 和 t 是不是一样的。 </p><p>把变量替换成 真正的字符串也是一样的。 </p><p><code>equalsIgnoreCase()</code> 不区分大小写。 </p><p>一定不要使用==运算符检测两个字符串是否相等！这个运算符只能够确定两个字符串是否放置在同一个位置上。当然，如果字符串放置在同一个位置上，它们必然相等。但是，完全有可能将内容相同的多个字符串的拷贝放置在不同的位置上。</p><h4 id="空串与-Null-串"><a href="#空串与-Null-串" class="headerlink" title="空串与 Null 串"></a>空串与 Null 串</h4><p>空串是 “” 是长度为 0 的串。 </p><p>空串是一个 Java对象， 有自己的长度（0）， 和内容 （空）。 </p><p>String 变量还可以存放一个长特殊的值， <code>null</code> 这表示目前没有任何对象与该变量关联</p><p>要检查一个字符串是否为null，要使用以下条件：</p><p><code>if (s == null)</code></p><p>时要检查一个字符串既不是null也不为空串，这种情况下就需要使用以下条件：</p><p><code>if (s != null &amp;&amp; s.length() !=0 )</code></p><h4 id="构建字符串"><a href="#构建字符串" class="headerlink" title="构建字符串"></a>构建字符串</h4><p>有些时候，需要由较短的字符串构建字符串，例如，按键或来自文件中的单词。采用字符串连接的方式达到此目的效率比较低。每次连接字符串，都会构建一个新的String对象，既耗时，又浪费空间。使用StringBuilder类就可以避免这个问题的发生。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">      StringBuilder builder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"></span><br><span class="line">      builder.append(<span class="string">"st"</span>);</span><br><span class="line">      String s = builder.toString();</span><br><span class="line"></span><br><span class="line">      builder.append(<span class="string">"er"</span>);</span><br><span class="line">      String t = builder.toString();</span><br><span class="line"></span><br><span class="line">System.out.println(s);</span><br><span class="line">      System.out.println(t);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>语言元素</title>
       <link href="/2020/04/12/200412%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/"/>
       <url>/2020/04/12/200412%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/</url>
@@ -74,9 +149,9 @@
       
         <tags>
             
-            <tag> git指令 </tag>
-            
             <tag> github </tag>
+            
+            <tag> git指令 </tag>
             
         </tags>
       
@@ -119,7 +194,7 @@
       
       <categories>
           
-          <category> java 学习 </category>
+          <category> java学习 </category>
           
       </categories>
       
@@ -144,7 +219,7 @@
       
       <categories>
           
-          <category> java 学习 </category>
+          <category> java学习 </category>
           
       </categories>
       
@@ -164,7 +239,7 @@
       <link href="/2020/04/05/hexo-github/"/>
       <url>/2020/04/05/hexo-github/</url>
       
-        <content type="html"><![CDATA[<h3 id="一：-新建分类页面和标签页面的时候"><a href="#一：-新建分类页面和标签页面的时候" class="headerlink" title="一： 新建分类页面和标签页面的时候"></a>一： 新建分类页面和标签页面的时候</h3><p>可以的源代码是这样</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>或者这样</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>然而我写成这样</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>为什么我会写成这样呢， 因为在 typora中打开的时候， 最上面和最下面的 — 被自动渲染了， 所以就没有看到，当我打开源码的时候才开到， emmm，每次部署上去都出错， 搞得我心态都崩了。 emmm</p><h3 id="二：-侧边栏的图标不能显示，或者显示之后网页就不能进去了；"><a href="#二：-侧边栏的图标不能显示，或者显示之后网页就不能进去了；" class="headerlink" title="二： 侧边栏的图标不能显示，或者显示之后网页就不能进去了；"></a>二： 侧边栏的图标不能显示，或者显示之后网页就不能进去了；</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home:  &#x2F; || home</span><br><span class="line">  about: &#x2F;about&#x2F; || user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br></pre></td></tr></table></figure><p>我写成上面那样是不行的， 或者我把后面的图标去掉，网页可以进，但没有图标。 </p><p>如果图标写在下面，也不可以。</p><p>机缘巧合我写成了这样： </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home:  &#x2F;|| home</span><br><span class="line">  about: &#x2F;about&#x2F;|| user</span><br><span class="line">  tags: &#x2F;tags&#x2F;|| tags</span><br><span class="line">  categories: &#x2F;categories&#x2F;|| th</span><br><span class="line">  archives: &#x2F;archives&#x2F;|| archive</span><br></pre></td></tr></table></figure><p>就是||前面没有空格， 他就可以了。 </p><h3 id="还要坑，-但是我忘了。emmm"><a href="#还要坑，-但是我忘了。emmm" class="headerlink" title="还要坑， 但是我忘了。emmm"></a>还要坑， 但是我忘了。emmm</h3>]]></content>
+        <content type="html"><![CDATA[<h3 id="一：-新建分类页面和标签页面的时候"><a href="#一：-新建分类页面和标签页面的时候" class="headerlink" title="一： 新建分类页面和标签页面的时候"></a>一： 新建分类页面和标签页面的时候</h3><p>可以的源代码是这样</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>或者这样</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>然而我写成这样</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>为什么我会写成这样呢， 因为在 typora中打开的时候， 最上面和最下面的 —- 被自动渲染了， 所以就没有看到，当我打开源码的时候才开到， emmm，每次部署上去都出错， 搞得我心态都崩了。 emmm</p><h3 id="二：-侧边栏的图标不能显示，或者显示之后网页就不能进去了；"><a href="#二：-侧边栏的图标不能显示，或者显示之后网页就不能进去了；" class="headerlink" title="二： 侧边栏的图标不能显示，或者显示之后网页就不能进去了；"></a>二： 侧边栏的图标不能显示，或者显示之后网页就不能进去了；</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home:  &#x2F; || home</span><br><span class="line">  about: &#x2F;about&#x2F; || user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br></pre></td></tr></table></figure><p>我写成上面那样是不行的， 或者我把后面的图标去掉，网页可以进，但没有图标。 </p><p>如果图标写在下面，也不可以。</p><p>机缘巧合我写成了这样： </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home:  &#x2F;|| home</span><br><span class="line">  about: &#x2F;about&#x2F;|| user</span><br><span class="line">  tags: &#x2F;tags&#x2F;|| tags</span><br><span class="line">  categories: &#x2F;categories&#x2F;|| th</span><br><span class="line">  archives: &#x2F;archives&#x2F;|| archive</span><br></pre></td></tr></table></figure><p>就是||前面没有空格， 他就可以了。 </p><h3 id="还要坑，-但是我忘了。emmm"><a href="#还要坑，-但是我忘了。emmm" class="headerlink" title="还要坑， 但是我忘了。emmm"></a>还要坑， 但是我忘了。emmm</h3>]]></content>
       
       
       <categories>
